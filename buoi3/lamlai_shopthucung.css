@@ -1,0 +1,166 @@
+:root{
+    --color0: rgb(251, 223, 232);
+    --color1:  rgb(241, 160, 174);
+    --color2: rgb(251, 130, 150);
+    --color3: rgb(252, 79, 119);
+    --color4: rgb(227, 59, 87);
+}
+
+body{
+    margin: 5px;
+    padding: 0;
+}
+/* .container{
+
+} */
+
+/* -------------------------------HEADER---------------------------------------- */
+/* --------LOGO-------- */
+.header-logo{
+    position: relative;
+    width: 100%;
+    height: 160px;
+    background-color: var(--color2);
+}
+
+.text-logo{
+    position: absolute;
+    top: 40px;
+    left: 155px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.logo{
+    width: 150px;
+    height: 150px;
+}
+
+/* --------MENU-------- */
+
+.header-menu{
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    background-color: var(--color3);
+    display: flex;
+}
+
+.h-menu {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    list-style: none;
+}
+
+.h-menu .menu a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.h-menu  .menu:hover{
+    background-color: var(--color3);
+}
+
+/*  Menu đa cấp */
+.h-menu .sub-menu {
+    position: absolute;
+    display: none;
+    padding: 0;
+    list-style: none;
+    width: 150px;
+    background: var(--color1);
+}
+
+.h-menu .sub-menu li {
+    background: var(--color2);
+    border-bottom: 1px solid var(--color4);
+ }
+
+ .h-menu .menu:hover .sub-menu  {  /* Cú pháp này là di chuột ở menu là new thì sẽ hiện sub-menu*/
+    background: var(--color3);
+    display: block;
+ }
+
+ .h-menu .sub-menu li:hover  {  /* Cú pháp này là di chuột ở li của sub-menu  thì sẽ hiện màu của li*/
+    background: var(--color3);
+    display: block;
+ }
+
+ /*------------------------------------------CONTENT-------------------------------*/
+ .content{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+ }
+ /*--------SIDE-BAR--------*/
+.left-content{
+    width: 100%;
+    height: auto;
+    background: var(--color0);
+}
+ .category{
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 10px;
+    border-bottom: 1px solid var(--color2);
+ }
+
+ /* .list-category{
+    margin: 0;
+    padding: 0;
+ } */
+
+ .list-ul-category{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+ }
+
+ .list-ul-category > li{
+    padding: 10px;
+    border-bottom: 1px solid var(--color2);
+ }
+ .list-ul-category a{
+    text-decoration: none;
+    color: rgb(41, 41, 41);
+ }
+
+ .list-ul-category li:hover {
+    background-color: var(--color2);
+ } 
+
+ /* MENU đa cấp side bar */
+
+ .sub-menu-category{
+    list-style: none;
+    position: absolute;
+    display: none;
+    padding: 0;
+    list-style: none;
+    width: 200px;
+    left: 310px;
+    top: 310px
+}
+
+.sub-menu-category>li{
+    padding: 10px;
+    border-bottom: 1px solid var(--color3);
+}
+
+.list-ul-category li:hover .sub-menu-category{
+    display: block;
+    background-color: var(--color1);
+}
+
+.list-ul-category .sub-menu-category li:hover{
+    background-color: var(--color2);
+}
+
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        div.fixed_box{
+            position: fixed;
+            top: 10px;
+            width: 100%;
+            height: 40px;
+            background-color: rgb(235, 96, 149);
+            text-align: center;
+            align-content: center;
+            font-size: 20px;
+            opacity: 0.8;
+        }
+        div.content{
+            position: relative;
+            top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fixed_box">Hộp fixed cứng</div>
+    <div class="content">
+        <h1>Nội dung trang</h1>
+        <p>Cuộn trang xuống để thấy hiệu ứng của hộp cố định</p>
+        <div style="height: 1500px;">Nội dung giả để có thể cuộn trang xuống</div>
+    </div>
+</body>
+</html>

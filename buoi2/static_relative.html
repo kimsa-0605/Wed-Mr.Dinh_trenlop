@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div.static{
+        position: static;
+        bottom: 50px; /*Sẽ không di chuyển dù có thêm bottom, left hay cí khác đè lên thì vẫn mặc địnhở đó*/
+        left: 120px;
+        width: 100px;
+        height: 100px;
+        background-color: rgb(81, 221, 148);
+        }
+        div.relative{
+            position: relative;
+            bottom: 100px;
+            left: 120px;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(228, 36, 104);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="static"></div>
+        <div class="relative"></div>
+    </div>
+</body>
+</html>

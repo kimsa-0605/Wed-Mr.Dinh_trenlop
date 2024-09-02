@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table{
+            width: 50%;
+            border: 1px solid;
+        }
+
+        .table .column1, .column2{
+            border-left: 1px solid;
+        }
+        .row2, .row1{
+            display: block;
+            border: 1px solid;
+        }
+
+        .row1{
+            background-color: rgb(137, 201, 247);
+        }
+        .row1 .column1{
+            border: 0;
+            padding-right: 28.5px;
+        }
+
+        .row2 .column1{
+            border: 0;
+            box-sizing: border-box;
+            padding-bottom: 5px;
+        }
+        .row2 .column2{
+            width: 613px;
+            height: 50px;
+        }
+        .sub-column1{
+            width: 100%;
+            border-bottom: 1px solid;
+            height: 25px;
+        }
+        
+        .sub-column2{
+            width: 100%;
+            background-color: red;
+            height: 25px;
+        }
+        .column1,.column2{
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="table">
+        <div class="row1">
+            <div class="column1">Name:</div>
+            <div class="column2">Mr.Angkor</div>
+        </div>
+        <div class="row2">
+            <div class="column1">Telephone:</div>
+            <div class="column2">
+                <div class="sub-column1">0123456789</div>
+                <div class="sub-column2">0877152961</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+    <style>
+        div.container{
+            position: relative;
+        }
+        div.bigbox{
+            position: relative;
+            width: 400px;
+            height: 400px;
+            display: flex; 
+            background-color: aqua;
+            border-radius: 50%;
+            overflow: hidden; /* Giới hạn các phần tử con trong hình tròn: ngoài hình tròn thì sẽ ẩn đi */
+            justify-content: center; /* Căn giữa các phần tử con theo chiều ngang */
+            align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
+        }
+        div.smallbox1{
+            position: absolute;
+            top: 40px;
+            left: 100px;
+            width: 80px;
+            height: 80px;
+            background-color: rgb(248, 117, 167);
+            border-radius: 50%;
+        }
+        div.smallbox2{
+            position: absolute;
+            bottom: 100px;
+            width: 80px;
+            height: 80px;
+            background-color: rgb(99, 231, 99);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bigbox">
+            <div class="smallbox1"></div>
+            <div class="smallbox2"></div>
+        </div>
+    </div>
+</body>
+</html> 
+

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Bài tập 1</title>
+    <style>
+        body{
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .container{
+            width: 600px;
+            padding: 350px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        p{
+            font-size: 15px;
+            color: rgb(235, 50, 112);
+            font-weight: bold;
+        }
+        .infor{
+            margin-bottom: 15px;
+            display: grid;
+            grid-template-columns: 10% 90% ;
+            align-items: center;
+            background-color: rgb(243, 243, 243);
+            border: 2px solid rgb(211, 210, 210);
+            border-radius: 5px ;
+        }
+
+        .infor .input>input{
+            border: none;
+            padding: 0;
+            margin: 10px 20px;
+            background-color: rgb(243, 243, 243);
+            color: rgb(111, 110, 109);
+        }
+
+        .infor .input>input:focus{
+            outline:  none;
+        }
+
+        .infor .icon{
+            padding: 15px 20px 15px 15px;
+            margin: 5px;
+            font-size: 20px;
+            width: 14px; /* Giới hạn chiều rộng của icon */
+            overflow: hidden; /* Cắt bớt phần nội dung vượt quá */
+            color: rgb(111, 110, 109);
+            border-right: 2px solid rgb(211, 210, 210);
+        }
+
+
+        .date-gender{
+            display: grid;
+            grid-template-columns: 50% 50%;
+        }
+
+        #year, #month, #day{
+            width: 70px;
+            height: 40px;
+            text-align: center;
+            border-radius: 5px;
+            margin-right: 2px;
+            color: rgb(111, 110, 109);
+            border: 2px solid rgb(211, 210, 210);
+            background-color: rgb(243, 243, 243);
+        }
+
+        #year, #month, #day:focus{
+            outline:  none;
+        }
+        .date-gender{
+            padding-bottom: 15px;
+        }
+        .gender-container {
+            margin-top: 25px; /* Tạo khoảng cách phía dưới */
+        }
+        .gender-container input[type="radio"] {
+            display: none;
+        }
+        /* Lable là  nếu click chuột vào nhãn, sẽ đưa con trỏ chuột vào vùng <input />.*/
+        .gender-container label {
+            width: 70px;
+            height: 40px;
+            padding: 10px 20px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer; /* Đổi kiểu chuột */
+            text-align: center;
+            color: rgb(111, 110, 109);
+            background-color: rgb(243, 243, 243);
+        }
+
+        .gender-container input[type="radio"]:checked + label {
+            border-color: rgb(235, 50, 112);; /* Đổi màu viền khi được chọn */
+        }
+        
+
+        .credit-card{
+            display: flex;
+        }
+
+        .credit-card input[type="radio"] {
+            display: none;
+        }
+
+        .credit-card label {
+            width: 70px;
+            height: 40px;
+            padding: 10px 20px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer; /* Đổi kiểu chuột */
+            text-align: center;
+            color: rgb(111, 110, 109);
+            background-color: rgb(243, 243, 243);
+        }
+
+
+        .paymentend{
+            display: grid;
+            grid-template-columns: 60% 15% 15% ;
+            box-sizing: border-box;
+            column-gap: 20px;
+        }
+
+        .select select{
+            border: 2px solid #ccc;
+            color: rgb(111, 110, 109);
+            background-color: rgb(243, 243, 243);
+            padding-right: 10px ;
+            border-radius: 5px ;
+            width: 110px;
+            height: 64px;
+        }
+
+        #submit{
+            color: white;
+            border: none;
+            font-weight: bold;
+            width: 600px;
+            height: 60px;
+            border-radius: 5px ;
+            background-color:  rgb(235, 50, 112);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="title">Account</p>
+        <div class="infor" >
+            <div class="icon fa fa-user"></div>
+            <div class="input"> <input type="text"  placeholder="Full Name"></div>
+        </div>
+        <div class="infor" >
+            <div class="icon fa fa-envelope"></div>
+            <div class="input"> <input type="text"  placeholder="Email Adress"></div>
+        </div>
+        <div class="infor" >
+            <div class="icon fa fa-key"></div>
+            <div class="input"> <input type="text"  placeholder="Password"></div>
+        </div>
+
+        <div class="date-gender">
+            <div class="date">
+                <p>Date of Birth</p>
+                <div class="date-container">
+                    <input type="text" id="day" name="day" placeholder="DD">
+                    <input type="text" id="month" name="month" placeholder="MM">
+                    <input type="text" id="year" name="year" placeholder="YYYY">
+                </div>
+            </div>
+            <div class="gender">
+                <p>Gender</p>
+                <div class="gender-container">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+            <div class="infor" >
+                <div class="icon fa fa-credit-card"></div>
+                <div class="input"> <input type="number"  placeholder="Card Number"></div>
+            </div>
+    
+            <div class="paymentend">
+                <div class="infor" >
+                    <div class="icon fa fa-user"></div>
+                    <div class="input"> <input type="text"  placeholder="Card CVC"></div>
+                </div>
+    
+                <div class="select">
+                    <select name="day-month" id="day-month">
+                        <option value="">01 Jan</option>
+                        <option value="">02 Jan</option>
+                        <option value="">03 Jan</option>
+                    </select>
+                </div>
+                
+                <div class="select">
+                    <select name="year" id="select-year">
+                        <option value="">2015</option>
+                        <option value="">2016</option>
+                        <option value="">2017</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+
+        <div >
+            <input id="submit" type="submit" value="Submit">   
+        </div>
+    </div>
+        
+</body>
+</html>

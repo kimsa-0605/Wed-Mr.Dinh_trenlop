@@ -1,0 +1,108 @@
+.container{
+    margin: 0;
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    border: 1px solid rgb(240, 239, 237);
+}
+
+.side-bar{
+    height: 100%;
+}
+
+.side-bar ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.side-bar ul li{
+    border: 1px solid rgb(240, 239, 237);
+}
+.side-bar ul li a{
+    padding: 5px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.side-bar li:hover {
+    background-color: rgb(199, 198, 198);
+    display: block;
+}
+
+.main-content{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(240, 239, 237);
+}
+.product{
+    margin: 20px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+.item{
+    background-color: white;
+    width: 100%;
+    height: 220px;
+}
+
+.item:hover{
+    border: 1px solid rgb(246, 209, 212);
+
+}
+.item img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.item .item-detail{
+    padding-bottom: 10px;
+}
+.item .item-detail h3{
+    margin: 0;
+    padding-left: 0;
+    padding-left: 10px;
+}
+.item .item-detail p{
+    margin: 0;
+    padding-left: 0;
+    font-size: 15px;
+    color: rgb(99, 99, 100);
+    padding-left: 10px;
+}
+
+.item .binh-luan{
+    padding-top: 10px;
+    padding-left: 10px;
+    display: flex;
+    gap: 5px;
+    border-top: 1px solid rgb(213, 212, 210) ;
+}
+.item .binh-luan img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.item .binh-luan p{
+    font-size: 17px;
+    margin: 0;
+    color: rgb(99, 99, 100);
+    padding-bottom: 15px;
+}
+
+.item .binh-luan b{
+    font-size: 17px;
+    margin: 0;
+    color: black;
+    padding-bottom: 15px;
+}

@@ -1,0 +1,90 @@
+/* body{
+
+} */
+
+@media screen and (max-width: 960px){
+    body{
+        background-color: rgb(16, 16, 220);
+        text-align: center;
+    }
+
+    .img1{
+        display: block;
+        width: 900px;
+        height: 900px;
+    }
+
+    .img2, .img3, .img4{
+        display: none;
+    }
+
+    p{
+        font-size: 100px;
+        color: rgb(217, 244, 44); 
+    }   
+}
+
+@media screen and (max-width: 768px){
+    body{
+        background-color: rgb(229, 60, 102);
+        text-align: center;
+    }
+
+    .img2{
+        display: block;
+        width: 700px;
+        height: 700px;
+    }
+
+    .img1, .img3, .img4{
+        display: none;
+    }
+    p{
+        font-size: 100px;
+        color: rgb(58, 216, 108); 
+    }  
+}
+
+@media screen and (max-width: 550px){
+    body{
+        background-color: rgb(48, 217, 42);
+        text-align: center;
+    }
+
+    .img3{
+        display: block;
+        width: 500px;
+        height: 500px;
+    }
+
+    .img2, .img1, .img4{
+        display: none;
+    }
+
+    p{
+        font-size: 100px;
+        color: rgb(216, 66, 58); 
+    } 
+}
+
+@media screen and (max-width: 320px){
+    body{
+        background-color: rgb(217, 244, 44);
+        text-align: center;
+    }
+
+    .img4{
+        display: block;
+        width: 300px;
+        height: 300px;
+    }
+
+    .img2, .img3, .img1{
+        display: none;
+    }
+
+    p{
+        font-size: 100px;
+        color: rgb(235, 27, 27); 
+    } 
+}

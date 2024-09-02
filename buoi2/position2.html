@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            height: 800px;
+            gap: 1.5%;
+        }
+        .left, .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .left img {
+            width: 100%;
+        }
+        .left img:nth-child(1){
+            height: 39%;
+        }
+        .left img:nth-child(2){
+            height: 19%;
+        }
+        .left img:nth-child(3){
+            height: 39%;
+        }
+        .right img {
+            width: 100%;
+            height: calc((100% / 2) - 1.5%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left" >
+            <img src="https://th.bing.com/th/id/R.2aa6e6436c2616a209a564d2560cbb90?rik=JGTnV1Ym36ysFA&pid=ImgRaw&r=0" alt ="Image 1">
+            <img src="https://img4.thuthuatphanmem.vn/uploads/2019/11/06/anh-chup-hoang-hon-tren-bien_025748015.jpg" alt ="Image 2">
+            <img src="https://recmiennam.com/wp-content/uploads/2018/03/hoang-hon-tren-bien-1.jpg" alt ="Image 3">
+        </div>
+        <div class="right" >
+            <img src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/03/ho-tay-ha-noi-1.jpg" alt ="Image 4">
+            <img src="https://recmiennam.com/wp-content/uploads/2018/03/hoang-hon-tren-bien-4.jpg" alt ="Image 5">
+        </div>
+    </div>
+</body>
+</html>

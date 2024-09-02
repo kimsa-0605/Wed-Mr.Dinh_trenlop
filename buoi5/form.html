@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .title{
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        input[type="submit"]{
+            background-color: rgb(245, 179, 216);
+            border: 2px solid palevioletred;
+            margin-left: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="" >
+            <p class="title">Personal Information</p>
+            <p> <b>Your name:</b> <input type="text" name="name" value="Name"></p>
+            <p><b>Gender:</b> <input type="radio" name="Gender">Male 
+                    <input type="radio" name="Gender">Female</p>
+
+        <table >
+            <tr>
+                <th><b>Your Favorite:</b></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" name=""> Cooking</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" name=""> Singing</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="checkbox" name=""> Dancing</td>
+            </tr>
+        </table>
+        <p><b>Your country:</b>
+            <select name="" id="">
+                <option value="">Việt Nam</option>
+                <option value="">Mỹ</option>
+                <option value="">Hàn Quốc</option>
+            </select>
+        </p>
+
+        <p><b>Address:</b>
+            <textarea name="" id=""></textarea>
+        </p>
+        <br>
+        <input type="submit" value="Send">   
+    </form>
+
+</body>
+</html>

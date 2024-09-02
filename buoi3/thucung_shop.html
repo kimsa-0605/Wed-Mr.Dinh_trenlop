@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phụ kiên cho thú cưng</title>
+    <style>
+        :root{
+            --color0: rgb(251, 223, 232);
+            --color1:  rgb(241, 160, 174);
+            --color2: rgb(251, 130, 150);
+            --color3: rgb(252, 79, 119);
+            --color4: rgb(227, 59, 87);
+        }
+
+        body{
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100%;
+            margin: 0;
+            border: 1px solid var(--color3);
+        }
+/* ------------------------------------HEADER----------------------------------------------------- */
+        .header{
+            width: 100%;
+            background-color:var(--color1)
+
+        }
+        .header-logo{
+            position: relative;
+            width:100%;
+            height: 125px;
+            padding-top: 10px;
+            background-color: var(--color2) ;
+        }
+
+        .logo{
+            width: 125px;
+            height:120px;
+        }
+        .text-logo{
+            position: absolute;
+            left: 125px;
+            bottom: 40px;
+            color: white;
+        }
+
+        /* Menu ngang */
+        .header-menu {
+            height: 40px;
+            background-color: var(--color3);
+        }
+        .h-menu ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .h-menu ul li{
+            display: inline-block;
+            padding-left: 20px;  
+        }
+
+        .h-menu ul a{
+            text-decoration: none;
+            color: white;
+            display: block;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .h-menu ul a:hover{
+            background-color:var(--color4);
+        }
+
+        /* Menu ngang đa cấp*/
+        .h-menu li ul {
+            position: absolute; /*có thể nổi trên các nội dung mà không ảnh hưởng tới ptu khác */
+            padding: 0;
+            margin: 0;
+            display: none;
+            list-style: none;
+            background-color: var(--color2);
+        }
+
+        .h-menu li ul li{
+            position: relative;
+            border-bottom: 1px solid var(--color3);
+            padding: 0;
+        }
+
+        .h-menu li ul li a {
+            margin: 0;
+            padding: 10px 25px 10px;
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+
+        .h-menu li:hover  ul{
+            display: block;
+        }
+        .h-menu li:hover  ul li {
+            display: block;
+        }
+
+/* ------------------------------------CONTENT----------------------------------------------------- */
+        .content{
+            display: grid;
+            grid-template-columns: 1.5fr 4fr;
+        }
+        .h-menu li ul li a:hover {
+            background-color: var(--color4);
+        }
+        /* Menu dọc */
+        .left-content{
+            height: 100%;
+            background-color: pink;
+            border-right: 1px solid var(--color3);
+        }
+
+        .category{
+            padding-left: 10px;
+            font-size: 20px;
+            border-bottom: 1px solid var(--color3);
+        }
+        
+        .category-items ul{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .category-items ul .item-menu a{
+            text-decoration: none;
+            color: black;
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid var(--color3);
+        }
+
+        .category-items ul a:hover{
+            background-color:var(--color2);
+        }
+
+        /* Menu dọc đa cấp */
+        .category-items ul li ul {
+            position: absolute; /* điều chỉnh thư mục con mà không làm thay đổi các ptu khác */
+            padding: 0;
+            left: 27.3%;
+            top: 39%;
+            display: none;
+            background-color: var(--color3);
+        }
+
+        .category-items li ul.text-li{
+            position: relative;
+            color: black;
+            padding: 0;
+            border-bottom: 1px solid var(--color3);
+        }
+
+        .category-items li ul li a{
+            margin: 0;
+            padding: 10px 25px 10px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .category-items li:hover  ul {
+            display: block;
+        }
+        .category-items li:hover  ul li {
+            background-color: var(--color1);
+            display: block;
+        }
+        /* Sản phẩm */
+       .right-content {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .product-item {
+            width: 30%; 
+            float: left;
+            margin: 1.6%;
+            height: 250px;
+            border: 1px solid var(--color4);
+            background-color: white;
+            border-radius: 20px;
+            box-sizing: border-box; 
+            align-items: center;
+            justify-content: center; 
+            text-align: center; 
+        }
+
+        .product-item h3 {
+            margin: 10px 0;
+            color: var(--color4);
+            font-weight: bold;
+        }
+
+        .product-img img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .product-detail p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #5b5454;
+        }
+
+        .button-cart button {
+            margin-top: 10px;
+            padding: 5px;
+            background-color: var(--color3);
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .button-cart button:hover {
+            background-color: var(--color4);
+        }
+
+        .product .product-item:hover{
+            background-color: var(--color0) ;
+        }
+
+/* ------------------------------------FOOTER----------------------------------------------------- */
+        .footer {
+            width: 100%;
+            height: 150px;
+            background-color: var(--color2);
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .content-footer p{
+            padding: 0;
+            margin: 0;
+            padding-top: 20px;
+            text-align: center;
+        }
+        .p1{
+            width: 100%;
+            height: 10px;
+            border-bottom: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <div class="header">
+            <div class="header-logo">
+                <img src="images/logomeo.png" class="logo">
+                <h3 class="text-logo">Meow Shop</h3>
+            </div>
+
+            
+            <div class="header-menu">
+                <div class="h-menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">New</a>
+                            <ul>
+                                <li><a href="#">Sub menu1</a></li>
+                                <li><a href="#">Sub menu2</a></li>
+                                <li><a href="#">Sub menu3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Services</a>
+                            <ul>
+                                <li><a href="#">Sub menu1</a></li>
+                                <li><a href="#">Sub menu2</a></li>
+                                <li><a href="#">Sub menu3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Site Map</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>                    
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="content">
+            <div class="left-content">
+                <div class="category">
+                    <h1 class="title-menu">Category</h1>
+                </div>
+                <div class="category-items">
+                    <ul>
+                        <li class="item-menu"><a href="#">Shop for dogs</a>
+                            <ul>
+                                <li class="text-small-li"><a href="#">Dog Food & Nutriton</a></li>
+                                <li class="text-small-li"><a href="#">Dog Shampoo</a></li>
+                                <li class="text-small-li"><a href="#">Dog Supplies & Housing</a></li>
+                            </ul>
+                        </li>
+                        <li class="item-menu"><a href="#">Buying supplies for cats</a></li>
+                        <li class="item-menu"><a href="#">Pettag</a></li>
+                        <li class="item-menu"><a href="#">Spa Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="title-product">
+                    <h2>Product:</h2>
+                </div>
+
+                <div class="product">
+                    <!-- Sản phẩm 1 -->
+                     <div class="product-item">
+                        <div class="name-shop">
+                            <h3>Meow Shop</h3>
+                        </div>
+                        <div class="product-img">
+                            <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lmbjuzqcifhb70">
+                        </div>
+                        <div class="product-detail">
+                            <p>Brown Bear Hat</p>
+                            <p>Price: 5$</p>
+                        </div>
+                        <div class="button-cart">
+                            <button>Add to cart</button>
+                        </div>
+                     </div>
+
+                     <!-- Sản phẩm 2 -->
+                     <div class="product-item">
+                        <div class="name-shop">
+                            <h3>Meow Shop</h3>
+                        </div>
+                        <div class="product-img">
+                            <img src="https://i.pinimg.com/564x/c3/64/d6/c364d6301a9930870001a32a13b0fa4e.jpg">
+                        </div>
+                        <div class="product-detail">
+                            <p>Cute Hat For Cats</p>
+                            <p>Price: 10$</p>
+                        </div>
+                        <div class="button-cart">
+                            <button>Add to cart</button>
+                        </div>
+                     </div>
+
+                     <!-- Sản phẩm 3 -->
+                     <div class="product-item">
+                        <div class="name-shop">
+                            <h3>Meow Shop</h3>
+                        </div>
+                        <div class="product-img">
+                            <img src="https://down-my.img.susercontent.com/file/d06b3b1ffc688be6b2d6d4b3bbcff877">
+                        </div>
+                        <div class="product-detail">
+                            <p>Cat Tent Bed</p>
+                            <p>Price: 7$</p>
+                        </div>
+                        <div class="button-cart">
+                            <button>Add to cart</button>
+                        </div>
+                     </div>
+                    <!-- Sản phẩm 4 -->
+                    <div class="product-item">
+                    <div class="name-shop">
+                        <h3>Meow Shop</h3>
+                    </div>
+                    <div class="product-img">
+                        <img src="https://sg-live-01.slatic.net/p/b70fcbfd13bffa8b22a28ce4716c0b2f.jpg_525x525q80.jpg">
+                    </div>
+                    <div class="product-detail">
+                        <p>Dog Heart Sunglasses</p>
+                        <p>Price: 3.55$</p>
+                    </div>
+                    <div class="button-cart">
+                        <button>Add to cart</button>
+                    </div>
+                    </div>
+                    <!-- Sản phẩm 5 -->
+                    <div class="product-item">
+                    <div class="name-shop">
+                        <h3>Meow Shop</h3>
+                    </div>
+                    <div class="product-img">
+                        <img src="https://cf.shopee.vn/file/sg-11134201-23020-00x7zt96a8mv45">
+                    </div>
+                    <div class="product-detail">
+                        <p>Cool Dog Shirts Pattern</p>
+                        <p>Price: 15$</p>
+                    </div>
+                    <div class="button-cart">
+                        <button>Add to cart</button>
+                    </div>
+                    </div>
+
+                    <!-- Sản phẩm 6 -->
+                    <div class="product-item">
+                    <div class="name-shop">
+                        <h3>Meow Shop</h3>
+                    </div>
+                    <div class="product-img">
+                        <img src="https://down-vn.img.susercontent.com/file/sg-11134201-7rd74-lw3zv2ajxe0d3c">
+                    </div>
+                    <div class="product-detail">
+                        <p>Cute Dog Shirts Pattern</p>
+                        <p>Price: 15$</h5>
+                    </div>
+                    <div class="button-cart">
+                        <button>Add to cart</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="content-footer">
+                <p class="p1">Contact Us</p>
+                <p>Email: meowshop@gamil.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
