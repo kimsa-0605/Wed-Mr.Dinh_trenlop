@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cách 4</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        
+        .container{
+            width: 960px;
+            min-height: 100vh; /* chiều cao nhỏ nhất là 100% */
+            background: #D2D2D2;
+            margin: 0px auto;  /* Căn giữa box container - căn giữa theo chiều ngang */
+        }
+        
+        .box_parent{
+            width: 600px;
+            height: 400px;
+            background: rgb(5, 5, 44);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box_center{
+            width: 180px;
+            padding: 15px;
+            background: rgb(191, 191, 22);
+            color: #000;
+            text-align: center;
+            /* Để căn giữa box_center thì trong box cha có các thuộc tính: display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="box_parent">
+                <div class="box_center">Box Center</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
